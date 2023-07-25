@@ -20,9 +20,26 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>d"] = { "\"_d"},
+    ["<leader>y"] = { "\"+y" },
+    ["<leader>Y"] = { "\"+Y" },
+    ["<leader>ya"] = { "ggVGy<C-O>" },
+    ["<leader>da"] = { "ggVGd<C-O>" },
+    ["<C-d>"] = {"<C-d>zz"},
+    ["<C-u>"] = {"<C-u>zz"},
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  x = {
+    ["<leader>p"] = {"\"_dP"},
+  },
+  v = {
+    ["<leader>y"] = { "\"+y" },
+    ["<leader>Y"] = { "\"+Y" },
+    ["<leader>d"] = { "\"_d"},
+    ["J"] = { ":m '>+1<CR>gv=gv", desc = "move chunk upward" },
+    ["K"] = { ":m '>-2<CR>gv=gv", desc = "move chunk downward" },
   },
 }
